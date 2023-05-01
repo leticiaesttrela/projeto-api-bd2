@@ -65,3 +65,41 @@ async function salvar(){
     .catch(error => alert('Falha ao salvar!'));    
 
 }
+async function listar(maps){
+
+    fetch('http://localhost:8080/encontrarEvento')
+    .then((response) => response.json()).then((dados) => {
+    const marcar = dados;
+    const ul = document.getElementById('exibir')
+    let infoWindow = new maps.InfoWindow();
+    marcar.forEach(marcar => {
+      const li = document.createElement('li');
+      const h3 = document.createElement('h3');
+      const p = document.createElement('p');
+      ul.appendChild(li);
+      li.appendChild(h3);
+      li.appendChild(p);
+      h3.textContent=marcar.nome;
+      p.textContent=marcar.local;
+      const latLng = new maps.LatLng(
+        marcar.geometria.coordinates[1],
+        marcar.geometria.coordinates[0]
+      );
+  
+      let marker = new maps.Marker({
+        position: latLng,
+        map: map,
+      });
+  
+      marker.addListener('click', () => {
+        infoWindow.close();
+        infoWindow.setContent(marcar.nome);
+        infoWindow.open(marker.getMap(), marker);
+      });
+  
+      map.addListener('click', () => {
+        infoWindow.close();
+      });
+    });
+    })}
+    window.initMap = initMap;
