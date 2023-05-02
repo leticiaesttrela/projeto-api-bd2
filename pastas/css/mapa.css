@@ -61,13 +61,17 @@ body {
     font-weight: 800;
     font-family: 'Nunito', sans-serif;
     }
-    #map {
-      height: 500px;
-      width: 100%;
-      margin-top: 50px;
-      }
-      
     
+    #map {
+        height: 500px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        position: relative;
+      }
+
     .marker {
       background-image: url('https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png');
       background-size: contain;
