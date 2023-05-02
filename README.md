@@ -13,6 +13,7 @@ Após a inicialização do servidor, é necessário abrir o arquivo index.html p
 # Colaboradores:
 
 Leticia Estrela Duarte
+
 Isaelson Gutembergh Trajano Gomes
 
  
