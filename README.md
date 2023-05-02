@@ -10,7 +10,8 @@ Para inicializar o servidor, basta executar o comando "node index.js".
 
 Após a inicialização do servidor, é necessário abrir o arquivo index.html para visualizar o projeto.
 
-#Colaboradores:
+# Colaboradores:
+
 Leticia Estrela Duarte
 Isaelson Gutembergh Trajano Gomes
 
