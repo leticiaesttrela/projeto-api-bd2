@@ -3,42 +3,32 @@
   <head>
     <title>Projeto Maps</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link rel="stylesheet" type="text/css" href="/pastas/css/buscar.css" />
+    <link rel="stylesheet" type="text/css" href="/pastas/css/mapa.css" />
     <script src="/pastas/javascript/mapa.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async></script>
   </head>
   <body>
-
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/arquivos/exibir.html">Exibir Eventos</a></li>
-          <li><a href="/arquivos/index.html">Cadastrar Eventos</a></li>
-        </ul>
-      </nav>
-    </header>
-
-      <section class="container">
-      <div class="square">
-        <div id="map"></div>
-    <div id="form">
-      <h1>Eventos</h1>
-      <form action="" method="post">
-          <div>
-              <input type="text" id="nome" placeholder="Evento">
-              <input type="text" id="local" placeholder="Local"/>
-              
+    <section class="container">
+        <div class="flex-container">
+          <div class="square">
+            <div id="map"></div>
+            <div id="form">
+              <h1>Eventos</h1>
+              <form action="" method="post">
+                <div>
+                  <input type="text" id="nome" placeholder="Evento">
+                  <input type="text" id="local" placeholder="Local"/>
+                </div>
+                <button type="button" onclick="salvar()">Cadastrar</button>
+              </form>
+            </div>
           </div>
-          <button type="button" onclick="salvar()">Cadastrar</button>
-      </form>
-  </div>
-  </div>
-    </section>
-
-
-    
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly"
-      async
-    ></script>
-  </body>
-</html>
+          
+          <div class="square">
+            <h1>Eventos Cadastrados</h1>
+            <ul id="exibir"></ul>
+          </div>
+        </div>
+      </section>
+    </body>
+    </html>      
